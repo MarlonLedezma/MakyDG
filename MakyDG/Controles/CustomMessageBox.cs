@@ -12,9 +12,11 @@ using System.Windows.Forms;
 namespace MakyDG.Controles
 {
     public partial class CustomMessageBox : Form
-    { //Fields
+    { 
+      //Fields
         private Color primaryColor = Color.CornflowerBlue;
         private int borderSize = 2;
+        private string buttonResult = string.Empty;
 
         //Properties
         public Color PrimaryColor
@@ -80,6 +82,49 @@ namespace MakyDG.Controles
             SetFormSize();
             SetButtons(buttons, defaultButton);
             SetIcon(icon);
+        }
+
+        public CustomMessageBox(string text, string caption, MessageBoxIcon Icon, string button1Text, string button2Text, string button3Text)
+        {
+            InitializeComponent();
+            InitializeItems();
+            this.PrimaryColor = primaryColor;
+            this.labelMessage.Text = text;
+            this.labelCaption.Text = caption;
+            SetFormSize();
+            SetIcon(Icon);
+            SetCustomButtons(button1Text, button2Text, button3Text);
+        }
+
+        //New Method to set custom button names and return button text on click
+        private void SetCustomButtons(string button1Text, string button2Text, string button3Text)
+        {
+            int xCenter = (this.panelButtons.Width - button1.Width) / 2;
+            int yCenter = (this.panelButtons.Height - button1.Height) / 2;
+
+            if (!string.IsNullOrEmpty(button1Text))
+            {
+                button1.Visible = true;
+                button1.Location = new Point(xCenter - button1.Width - 5, yCenter);
+                button1.Text = button1Text;
+                button1.Click += (sender, e) => { buttonResult = button1.Text; this.Close(); };
+            }
+
+            if (!string.IsNullOrEmpty(button2Text))
+            {
+                button2.Visible = true;
+                button2.Location = new Point(xCenter, yCenter);
+                button2.Text = button2Text;
+                button2.Click += (sender, e) => { buttonResult = button2.Text; this.Close(); };
+            }
+
+            if (!string.IsNullOrEmpty(button3Text))
+            {
+                button3.Visible = true;
+                button3.Location = new Point(xCenter + button2.Width + 5, yCenter);
+                button3.Text = button3Text;
+                button3.Click += (sender, e) => { buttonResult = button3.Text; this.Close(); };
+            }
         }
 
         //-> Private Methods
@@ -280,6 +325,11 @@ namespace MakyDG.Controles
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public string GetButtonResult()
+        {
+            return buttonResult;
         }
 
         #region -> Drag Form

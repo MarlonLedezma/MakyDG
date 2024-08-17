@@ -24,7 +24,8 @@ namespace MakyDG.Forms
             LN_Login lnLogin = new LN_Login();
             if (txtUserName.Texts == "" || txtPassWord.Texts =="")
             {
-                MessageBoxCus.Show
+                MessageBoxCus.Show("Ingrese los Datos Solicitados","Datos Invalidos",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
             }
             if (lnLogin.ValidarUsuario(txtUserName.Texts, txtPassWord.Texts))
             {

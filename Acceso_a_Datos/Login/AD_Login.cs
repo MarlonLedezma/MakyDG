@@ -26,7 +26,17 @@ namespace Acceso_a_Datos.Login
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
-                        resultado = true;
+                        while (reader.Read())
+                        {
+                            Utilidades.Cache.UsuarioCache.IdUsuario = reader.GetInt32(0);
+                            Utilidades.Cache.UsuarioCache.IdEmpresa = reader.GetInt32(1);
+                            Utilidades.Cache.UsuarioCache.Nombre = reader.GetString(2);
+                            Utilidades.Cache.UsuarioCache.Apellido = reader.GetString(3);
+                            Utilidades.Cache.UsuarioCache.Rol = reader.GetString(4);
+                            Utilidades.Cache.UsuarioCache.Usuario = reader.GetString(5);
+                            Utilidades.Cache.UsuarioCache.Contrasena = reader.GetString(6);
+                            resultado = true;
+                        }
                     }
                     Conn.CloseConnection();
                 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica_de_Negocios", "Logic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakyDG", "MakyDG\MakyDG.csproj", "{0947264A-E395-4731-A732-0F5FC8336531}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilidades", "Utilidades\Utilidades.csproj", "{F44018FC-931D-4A27-9FFE-27AF934CE5C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0947264A-E395-4731-A732-0F5FC8336531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0947264A-E395-4731-A732-0F5FC8336531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0947264A-E395-4731-A732-0F5FC8336531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F44018FC-931D-4A27-9FFE-27AF934CE5C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44018FC-931D-4A27-9FFE-27AF934CE5C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44018FC-931D-4A27-9FFE-27AF934CE5C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F44018FC-931D-4A27-9FFE-27AF934CE5C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

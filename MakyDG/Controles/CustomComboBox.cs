@@ -281,6 +281,19 @@ namespace MakyDG.Controles
             set { cmbList.ValueMember = value; }
         }
 
+        [Category("RJ Code - Data")]
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public object SelectedValue
+        {
+            get { return cmbList.SelectedValue; }
+            set
+            {
+                cmbList.SelectedValue = value;
+                lblText.Text = cmbList.Text; // Actualizar el texto de la etiqueta
+            }
+        }
+
         //Private methods
         private void AdjustComboBoxDimensions()
         {

@@ -44,6 +44,16 @@ namespace MakyDG.Controles
                 result = msgForm.ShowDialog();
             return result;
         }
+        public static string Show(string text, string caption, MessageBoxIcon icon, string button1Text, string button2Text, string button3Text)
+        {
+            string result;
+            using (var msgForm = new CustomMessageBox(text, caption, icon, button1Text, button2Text, button3Text))
+            {
+                msgForm.ShowDialog();
+                result = msgForm.GetButtonResult();
+            }
+            return result;
+        }
 
         /*-> IWin32Window Owner:
             *      Displays a message box in front of the specified object and with the other specified parameters.
@@ -81,6 +91,16 @@ namespace MakyDG.Controles
             DialogResult result;
             using (var msgForm = new CustomMessageBox(text, caption, buttons, icon, defaultButton))
                 result = msgForm.ShowDialog(owner);
+            return result;
+        }
+        public static string Show(IWin32Window owner, string text, string caption,MessageBoxIcon icon, string button1Text, string button2Text, string button3Text)
+        {
+            string result;
+            using (var msgForm = new CustomMessageBox(text, caption, icon, button1Text, button2Text, button3Text))
+            {
+                msgForm.ShowDialog(owner);
+                result = msgForm.GetButtonResult();
+            }
             return result;
         }
     }

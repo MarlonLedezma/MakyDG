@@ -52,7 +52,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(2, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(346, 35);
+            this.panelTitleBar.Size = new System.Drawing.Size(346, 50);
             this.panelTitleBar.TabIndex = 0;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -77,7 +77,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(306, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 35);
+            this.btnClose.Size = new System.Drawing.Size(40, 50);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -90,9 +90,9 @@
             this.panelButtons.Controls.Add(this.button2);
             this.panelButtons.Controls.Add(this.button1);
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelButtons.Location = new System.Drawing.Point(2, 88);
+            this.panelButtons.Location = new System.Drawing.Point(2, 114);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(346, 60);
+            this.panelButtons.Size = new System.Drawing.Size(346, 54);
             this.panelButtons.TabIndex = 1;
             // 
             // button3
@@ -143,10 +143,10 @@
             this.panelBody.Controls.Add(this.labelMessage);
             this.panelBody.Controls.Add(this.pictureBoxIcon);
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBody.Location = new System.Drawing.Point(2, 37);
+            this.panelBody.Location = new System.Drawing.Point(2, 52);
             this.panelBody.Name = "panelBody";
             this.panelBody.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.panelBody.Size = new System.Drawing.Size(346, 51);
+            this.panelBody.Size = new System.Drawing.Size(346, 62);
             this.panelBody.TabIndex = 2;
             // 
             // labelMessage
@@ -170,7 +170,7 @@
             this.pictureBoxIcon.Image = global::MakyDG.Properties.Resources.chat;
             this.pictureBoxIcon.Location = new System.Drawing.Point(10, 10);
             this.pictureBoxIcon.Name = "pictureBoxIcon";
-            this.pictureBoxIcon.Size = new System.Drawing.Size(40, 41);
+            this.pictureBoxIcon.Size = new System.Drawing.Size(40, 52);
             this.pictureBoxIcon.TabIndex = 0;
             this.pictureBoxIcon.TabStop = false;
             // 
@@ -179,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(350, 150);
+            this.ClientSize = new System.Drawing.Size(350, 170);
             this.Controls.Add(this.panelBody);
             this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.panelTitleBar);

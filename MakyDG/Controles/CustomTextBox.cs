@@ -191,6 +191,20 @@ namespace MakyDG.Controles
             }
         }
 
+        [Category("RJ Code Advance")]
+        public HorizontalAlignment TextAlign
+        {
+            get { return textBox1.TextAlign; }
+            set { textBox1.TextAlign = value; }
+        }
+
+        [Category("RJ Code Advance")]
+        public bool ReadOnly
+        {
+            get { return textBox1.ReadOnly; }
+            set { textBox1.ReadOnly = value; }
+        }
+
 
 
         #endregion
@@ -366,6 +380,7 @@ namespace MakyDG.Controles
             this.Invalidate();
             SetPlaceholder();
         }
+
         ///::::+
         #endregion
     }

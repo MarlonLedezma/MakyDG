@@ -74,6 +74,9 @@
     <Compile Include="Controles\CustomComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controles\CustomDataTimePiker.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controles\CustomMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +93,9 @@
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Controles\MessageBoxCus.cs" />
+    <Compile Include="Controles\ToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\Actualizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,24 @@
     <Compile Include="Forms\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmObservaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmObservaciones.Designer.cs">
+      <DependentUpon>frmObservaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProyecto.Designer.cs">
+      <DependentUpon>frmProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTareas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTareas.Designer.cs">
+      <DependentUpon>frmTareas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controles\CustomMessageBox.resx">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
@@ -123,6 +147,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmObservaciones.resx">
+      <DependentUpon>frmObservaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProyecto.resx">
+      <DependentUpon>frmProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTareas.resx">
+      <DependentUpon>frmTareas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -153,6 +186,10 @@
       <Project>{95fd0fb4-cf1c-4f5e-9a54-209c3340ec6a}</Project>
       <Name>Logica_de_Negocios</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utilidades\Utilidades.csproj">
+      <Project>{f44018fc-931d-4a27-9ffe-27af934ce5c6}</Project>
+      <Name>Utilidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="IWshRuntimeLibrary">
@@ -167,6 +204,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="5933025.ico" />
+    <None Include="Resources\calendarWhite.png" />
+    <None Include="Resources\calendarDark.png" />
     <None Include="Resources\chat.png" />
     <None Include="Resources\question.png" />
     <None Include="Resources\information.png" />
